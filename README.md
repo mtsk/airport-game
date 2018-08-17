@@ -2,7 +2,7 @@
 
 > My solution to a school assignment about defensive programming techniques.
 
-## [Play the game](/index.html)
+## [Play the game](https://mtsk.github.io/airport-game/index.html)
 
 Tested in Chrome and Firefox. Browser width should be 1200+ px.
 
@@ -21,7 +21,7 @@ and effortlessly.
 The solution is intentionally simplistic, because I wanted to focus on the main
 topic of the course, i.e. defensive programming. So there's no build steps
 (e.g. concatenation and minification of JS files), no responsive styles, and
-definitely no fancy virtual DOM diffings and such. :-)
+definitely no fancy virtual DOM diffings and such. :smiley:
 
 ## My takeaways
 
