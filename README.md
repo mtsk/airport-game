@@ -2,7 +2,7 @@
 
 > My solution to a school assignment about defensive programming techniques.
 
-## [Play the game](https://mtsk.github.io/airport-game/index.html)
+## [Play the game](https://mtsk.github.io/airport-game/)
 
 Tested in Chrome and Firefox. Browser width should be 1200+ px.
 
