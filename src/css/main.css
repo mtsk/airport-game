@@ -1,0 +1,87 @@
+/* LAYUOT */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #fafafa;
+    font-family: monospace;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.col {
+    float: left;
+    min-height: 1px;
+    padding: 0 1rem;
+    width: calc(100% / 3);
+}
+.col-2-3 {
+    width: calc(100% / 3 * 2);
+}
+.col-1-6 {
+    width: calc(100% / 6);
+}
+
+
+/* HELPERS */
+
+.color-a {
+    background: paleturquoise;
+    padding: 0 0.25rem;
+}
+.color-b {
+    background: gold;
+    padding: 0 0.25rem;
+}
+
+.color-red {
+    color: crimson;
+}
+
+.hidden {
+    display: none;
+}
+
+.tar {
+    text-align: right;
+}
+
+
+/* DOM */
+
+#instructions {
+    font-size: 1.2rem;
+    margin: 1rem auto;
+    max-width: 800px;
+}
+
+#game {
+    height: calc(100vh - 6rem);
+    margin: 1rem auto;
+    max-width: 1200px;
+    overflow-y: auto;
+}
+
+footer {
+    border-top: 2px solid #000;
+    bottom: 0;
+    height: 5rem;
+    line-height: 2rem;
+    max-width: 1200px;
+    padding: 1.5rem 0 0.5rem;
+    position: absolute;
+    width: 100%;
+}
+
+.input {
+    font-family: monospace;
+    height: 2rem;
+    padding: 0 0.5rem;
+    width: 100%;
+}
+
+.input-error {
+    color: crimson;
+}

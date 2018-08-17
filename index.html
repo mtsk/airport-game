@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Airport game</title>
+  <link rel="stylesheet" href="./src/css/main.css">
+</head>
+<body>
+
+<div id="instructions">
+  <noscript>
+    <h1>Please enable Javascript!</h1>
+    <hr>
+  </noscript>
+
+  <h1>Airport game</h1>
+  <p>Command incoming planes to land and departing planes to embark (take off)!</p>
+  <p>Landing and embarking takes 3 seconds and nets you +1 point. If more than one plane is occupying a lane at the same time, the game is over.</p>
+  <p>Landing will happen automatically after a timeout which you can delay. But don't delay too much, or the plane will leave in frustration, netting you -3 points.</p>
+  <p>Taking off is not automatic; you need to command departing planes to embark. Again, don't wait too much: after every 10 seconds of waiting, you'll net -1 point. Canceling a departing plane nets you -5 points!</p>
+  <p>Give commands in the form of "&lt;plane&gt; &lt;command&gt;", where &lt;plane&gt; is the ID of a plane and &lt;command&gt; is one of the following:</p>
+  <ul>
+    <li>
+      Incoming planes
+      <ul>
+        <li>a = route an incoming plane to lane <u>A</u></li>
+        <li>b = route an incoming plane to lane <u>B</u></li>
+        <li>c = <u>c</u>ancel landing, -2 points</li>
+        <li>d = <u>d</u>elay landing for 3 seconds</li>
+      </ul>
+    </li>
+    <li>
+      Departing planes
+      <ul>
+        <li>c = <u>c</u>ancel takeoff, -5 points</li>
+        <li>e = <u>e</u>mbark (= take off)</li>
+      </ul>
+    </li>
+  </ul>
+  <p>For example: "3 b" routes an incoming plane with the ID of 3 to land at plane B.</p>
+  <p>
+    <a href="#" class="start-game">Start the game!</a>
+  </p>
+</div>
+
+<div id="game" class="hidden">
+  <div class="col">
+    <h2>Incoming planes</h2>
+    <ul class="incoming"></ul>
+  </div>
+  <div class="col">
+    <h2>Departing planes at Lane <span class="color-a">A</span></h2>
+    <ul class="lane-a"></ul>
+  </div>
+  <div class="col">
+    <h2>Departing planes at Lane <span class="color-b">B</span></h2>
+    <ul class="lane-b"></ul>
+  </div>
+
+  <footer>
+    <div class="col col-2-3">
+      <input type="text"
+          class="input"
+          placeholder="&quot;<plane> <command>&quot; + Enter &mdash;&mdash; to lane (a), to lane (b), (c)ancel, (d)elay, (e)mbark &mdash;&mdash; Esc = clear"
+          title="E.g. &quot;2 e&quot; or &quot; 11 c&quot;">
+    </div>
+    <div class="col col-1-6">
+      <span class="input-error"></span>
+    </div>
+    <div class="col col-1-6 tar">
+      Score:
+      <span class="score"></span>
+    </div>
+  </footer>
+</div>
+
+<script src="./src/js/main.js" type="module"></script>
+
+</body>
+</html>
